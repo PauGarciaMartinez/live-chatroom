@@ -30,7 +30,11 @@ export default {
     const email = ref('')
     const password = ref('')
 
-    export { displayName, email, password }
+    const handleSubmit = () => {
+      
+    }
+
+    return { displayName, email, password }
   }
 }
 </script>
