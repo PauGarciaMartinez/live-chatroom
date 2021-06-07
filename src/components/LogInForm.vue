@@ -2,11 +2,6 @@
 
   <form @submit.prevent="handleSubmit">
     <input 
-      type="text" 
-      required 
-      placeholder="Display name" 
-      v-model="displayName">
-    <input 
       type="email" 
       required 
       placeholder="Email" 
@@ -16,7 +11,7 @@
       required 
       placeholder="Password" 
       v-model="password">
-    <button>Sign Up</button>
+    <button>Log In</button>
   </form>
 
 </template>
@@ -26,7 +21,6 @@ import { ref } from 'vue'
 
 export default {
   setup() {
-    const displayName = ref('')
     const email = ref('')
     const password = ref('')
 
@@ -34,7 +28,7 @@ export default {
       
     }
 
-    return { displayName, email, password, handleSubmit }
+    return { email, password, handleSubmit }
   }
 }
 </script>

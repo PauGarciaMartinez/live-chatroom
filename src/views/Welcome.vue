@@ -7,10 +7,13 @@
 
 <script>
 import SignUpForm from '@/components/SignUpForm'
+import LogInForm from '@/components/LogInForm'
+
 
 export default {
   components: {
-    SignUpForm
+    SignUpForm,
+    LogInForm
   }
 }
 </script>
