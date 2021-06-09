@@ -11,6 +11,7 @@
       required 
       placeholder="Password" 
       v-model="password">
+    <div class="error">{{ error }}</div>
     <button>Log In</button>
   </form>
 
@@ -34,7 +35,7 @@ export default {
       }
     }
 
-    return { email, password, handleSubmit }
+    return { email, password, handleSubmit, error }
   }
 }
 </script>
