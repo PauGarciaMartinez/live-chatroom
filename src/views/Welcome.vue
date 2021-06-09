@@ -9,7 +9,7 @@
     <div v-else="!showLogin">
       <h2>Sign Up</h2>
       <SignUpForm />
-      <p>Already registered? <span @click="showLogin = true">Log In</span></p>
+      <p>Already registered? <span @click="showLogin = true">Log In</span> instead</p>
     </div>
     
   </div>
