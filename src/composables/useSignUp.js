@@ -7,9 +7,17 @@ const signUp = async (email, password, displayName) => {
   error.value = null
 
   try {
-    await projectAuth
-  } catch(err) {
+    const res = await projectAuth.createUserWithEmailAndPassword(email, password)
 
+    if (!res) {
+      throw new Error('Could not complete the sign up')
+    }
+
+
+
+  } catch(err) {
+    console.log(err.message)
+    error.value = err.message
   }
 
 }
