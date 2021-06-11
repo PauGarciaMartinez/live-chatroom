@@ -19,7 +19,7 @@
 import SignUpForm from '@/components/SignUpForm'
 import LogInForm from '@/components/LogInForm'
 import { ref } from '@vue/reactivity'
-
+import { useRouter } from 'vue-router'
 
 export default {
   components: {
@@ -28,8 +28,11 @@ export default {
   },
   setup() {
     const showLogin = ref(true)
+    const router = useRouter()
 
-    const
+    const enterCHat = () => {
+      router.push({ name: 'Chatroom' })
+    }
 
     return { showLogin }
   }
