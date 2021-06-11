@@ -3,7 +3,7 @@
     <p>Welcome</p>
     <div v-if="showLogin">
       <h2>Log In</h2>
-      <LogInForm />
+      <LogInForm @login="enterChat" />
       <p>No account yet? <span @click="showLogin = false">Sign Up</span></p>
     </div>
     <div v-else="!showLogin">
@@ -28,6 +28,8 @@ export default {
   },
   setup() {
     const showLogin = ref(true)
+
+    const
 
     return { showLogin }
   }

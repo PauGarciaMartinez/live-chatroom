@@ -22,7 +22,7 @@ import { ref } from 'vue'
 import useLogIn from '@/composables/useLogIn'
 
 export default {
-  setup() {
+  setup(props, { emit }) {
     const email = ref('')
     const password = ref('')
 
@@ -32,6 +32,7 @@ export default {
       await logIn(email.value, password.value)
       if (!error.value) {
         console.log('User logged in')
+        emit('login')
       }
     }
 
