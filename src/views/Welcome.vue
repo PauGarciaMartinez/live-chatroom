@@ -8,7 +8,7 @@
     </div>
     <div v-else="!showLogin">
       <h2>Sign Up</h2>
-      <SignUpForm />
+      <SignUpForm @signup="enterChat" />
       <p>Already registered? <span @click="showLogin = true">Log In</span> instead</p>
     </div>
     
@@ -30,11 +30,11 @@ export default {
     const showLogin = ref(true)
     const router = useRouter()
 
-    const enterCHat = () => {
+    const enterChat = () => {
       router.push({ name: 'Chatroom' })
     }
 
-    return { showLogin }
+    return { showLogin, enterChat }
   }
 }
 </script>
