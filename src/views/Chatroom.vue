@@ -20,8 +20,8 @@ export default {
     const router = useRouter()
     const { user, error } = getUser() 
 
-    watch(user, (user) => {
-      if(!user) {
+    watch(user, () => {
+      if(!user.value) {
         router.push({ name: 'Welcome'})
       }
     })
