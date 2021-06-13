@@ -1,8 +1,8 @@
 <template>
-  <nav>
+  <nav v-if="user">
     <div>
-      <p>Hey there... display name here</p>
-      <p class="email">Currently logged in as... email</p>
+      <p>Hey there {{ user.displayName }}</p>
+      <p class="email">Currently logged in as {{ user.email }}</p>
     </div>
     <button @click="handleClick">Log Out</button>
   </nav>
@@ -10,10 +10,12 @@
 
 <script>
 import useLogOut from '@/composables/useLogOut'
+import getUser from '@/composables/getUser'
 
 export default {
   setup() {
     const { logOut, error } = useLogOut()
+    const { user } = getUser()
 
     const handleClick = async () => {
       await logOut()
@@ -22,7 +24,7 @@ export default {
       }
     }
 
-    return { logOut, error, handleClick }
+    return { logOut, error, handleClick, user }
   }
 }
 </script>
