@@ -8,10 +8,23 @@
 
 <script>
 import Navbar from '@/components/Navbar'
+import getUser from '@/composables/getUser'
+import { watch } from '@vue/runtime-core'
+import { useRouter } from 'vue-router'
 
 export default {
   components: {
     Navbar
+  },
+  setup() {
+    const router = useRouter()
+    const { user, error } = getUser() 
+
+    watch(user, (user) => {
+      if(!user) {
+        router.push({ name: 'Welcome'})
+      }
+    })
   }
 }
 </script>
