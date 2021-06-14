@@ -43,6 +43,7 @@ nav {
 nav p {
   margin: 2px auto;
   font-size: 16px;
+  text-align: left;
   color: #444;
 }
 nav p.email {
