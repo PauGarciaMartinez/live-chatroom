@@ -18,7 +18,7 @@ import { timestamp } from '../firebase/config'
 export default {
   setup() {
     const { user } = getUser()
-    const { addDoc, error } = useCollection()
+    const { addDoc, error } = useCollection('messages')
 
     const message = ref('')
 
