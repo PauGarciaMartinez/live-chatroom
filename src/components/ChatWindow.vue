@@ -13,10 +13,16 @@
 
 <script>
 import getCollection from '@/composables/getCollection'
+import { formatDistanceToNow } from 'date-fns'
+import { computed } from '@vue/runtime-core'
 
 export default {
   setup() {
     const { documents, error } = getCollection('messages')
+
+    const formattedDocument = computed(() => {
+      
+    })
 
     return { documents, error }
   }
