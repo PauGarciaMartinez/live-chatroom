@@ -74,5 +74,9 @@ export default {
   .welcome input {
     max-width: 80%;
   }
+  .welcome p {
+    font-size: 0.9rem;
+    padding: 0 15px;
+  }
 }
 </style>
