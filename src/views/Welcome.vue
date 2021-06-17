@@ -45,7 +45,7 @@ export default {
   padding: 20px 0;
 }
 .welcome form {
-  width: 300px;
+  max-width: 300px;
   margin: 20px auto;
 }
 .welcome label {
@@ -54,6 +54,7 @@ export default {
 }
 .welcome input {
   width: 100%;
+  
   padding: 10px;
   border-radius: 20px;
   border: 1px solid #eee;
@@ -68,5 +69,10 @@ export default {
 }
 .welcome button {
   margin: 20px auto;
+}
+@media (max-width: 470px) {
+  .welcome input {
+    max-width: 80%;
+  }
 }
 </style>
