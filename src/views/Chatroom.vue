@@ -53,4 +53,17 @@ nav p.email {
   font-size: 14px;
   color: #999;
 }
+
+@media (max-width: 540px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  nav button {
+    background-color: white;
+    color: #699fd4;
+    padding: 0;
+  }
+}
 </style>
